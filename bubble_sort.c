@@ -29,8 +29,13 @@ int main () {
   int i = 0;
 
   srand(time(NULL));
-  for(i = 0; i < rand() % sizeof array; i++) {
+  int x = rand() % sizeof array;
+  printf("x=%d\n", x);
+  for(i = 0; i < x; i++) {
+    // TODO: figure out why this doesn't segfault
+    // upon access to array[n] where n>=32
     array[i] = rand();
+    printf("i %4d=%4d\n", i, array[i]);
   }
 
   sort(array);
