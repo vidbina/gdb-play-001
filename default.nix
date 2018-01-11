@@ -24,11 +24,6 @@ rec {
       which
     ];
 
-    hardeningDisable = [
-      #"all"
-      "format"
-    ];
-
     fhsEnv = buildFHSUserEnv {
       inherit name;
     };
