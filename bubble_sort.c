@@ -33,7 +33,7 @@ int main () {
     // TODO: figure out why this doesn't segfault
     // upon access to array[n] where n>=32
     array[i] = rand();
-    printf("i %4d=%4d\n", i, array[i]);
+    printf("i %4d=%4ld\n", i, array[i]);
   }
 
   sort(array);
