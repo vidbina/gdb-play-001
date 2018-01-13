@@ -1,0 +1,65 @@
+Decoded dump of debug contents of section .debug_line:
+
+CU: ../sysdeps/x86_64/start.S:
+File name                            Line number    Starting address
+start.S                                       63            0x4005f0
+
+start.S                                       79            0x4005f2
+start.S                                       85            0x4005f5
+start.S                                       88            0x4005f6
+start.S                                       90            0x4005f9
+start.S                                       93            0x4005fd
+start.S                                       97            0x4005fe
+start.S                                      107            0x4005ff
+start.S                                      108            0x400606
+start.S                                      110            0x40060d
+start.S                                      120            0x400614
+start.S                                      122            0x40061a
+
+CU: init.c:
+File name                            Line number    Starting address
+
+CU: ../sysdeps/x86_64/crti.S:
+File name                            Line number    Starting address
+crti.S                                        64            0x400548
+
+crti.S                                        66            0x40054c
+crti.S                                        67            0x400553
+crti.S                                        68            0x400556
+crti.S                                        69            0x400558
+crti.S                                        80            0x400764
+
+
+CU: ./example.c:
+File name                            Line number    Starting address
+example.c                                      6            0x400580
+
+/nix/store/jxy9c9fbxqai3r66kx61jdwdpbzbhbl4-glibc-2.25-49-dev/include/bits/stdio2.h:
+stdio2.h                                     104            0x400581
+
+./example.c:[++]
+example.c                                     15            0x40058f
+
+/nix/store/jxy9c9fbxqai3r66kx61jdwdpbzbhbl4-glibc-2.25-49-dev/include/bits/stdio2.h:
+stdio2.h                                     104            0x400591
+
+./example.c:[++]
+example.c                                     15            0x4005e0
+
+
+/nix/store/jxy9c9fbxqai3r66kx61jdwdpbzbhbl4-glibc-2.25-49-dev/include/bits/stdio2.h:
+stdio2.h                                     104            0x4005e3
+
+./example.c:[++]
+example.c                                     15            0x4005e8
+example.c                                     22            0x4005ed
+
+CU: ../sysdeps/x86_64/crtn.S:
+File name                            Line number    Starting address
+crtn.S                                        40            0x40055a
+
+crtn.S                                        41            0x40055e
+crtn.S                                        44            0x400768
+
+crtn.S                                        45            0x40076c
+
