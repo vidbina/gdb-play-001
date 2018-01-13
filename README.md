@@ -53,5 +53,7 @@ key).
 `disas` disassemble
 
 > NOTE: When debugging 01-basics/example.c and while stepping through the for-loop setting the index to a value greater thant the upper-boundary of the for-loop, somehow the for-loop ends up in a runaway state.
+
 > NOTE: When debugging 01-basics/example.c and stepping through the code, I changed verbose to false in 01-basics/example.c and somehow gdb reloaded the source
+
 > NOTE: When debugging 01-basics/example.c, I noticed that stepping through the code produces some jumpy behavior. For example, the first printf is respected but after entering next to cursor jumps to the for-loop.
