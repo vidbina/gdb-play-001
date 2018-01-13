@@ -24,10 +24,6 @@ rec {
       which
     ];
 
-    fhsEnv = buildFHSUserEnv {
-      inherit name;
-    };
-
     introText = ''
       Source:
         - Title: Give me 15 minutes and I'll change your view of GDB
@@ -39,8 +35,6 @@ rec {
       export PS1="\e[1;33m$ \e[0m";
       echo "$introText"
       echo ""
-      echo "Run \`fhs\` to drop into FHS env from which the install/bin/dbb-app should be executable"
-      alias fhs="${fhsEnv}/bin/${name}"
     '';
   };
 }
