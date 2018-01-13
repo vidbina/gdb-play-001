@@ -34,7 +34,7 @@ rec {
     '';
 
     shellHook = ''
-      export PS1="\e[1;33m$ \e[0m";
+      export PS1="\[\e[1;33m\]$ \[\e[0m\]";
       export LANG=en_US.UTF-8
 
       echo "$introText"
