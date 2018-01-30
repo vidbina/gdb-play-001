@@ -12,7 +12,7 @@ rec {
     gccPkgs = [
       autoconf
       automake
-      gcc49
+      gcc7
       gdb
     ];
 
