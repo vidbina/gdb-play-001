@@ -1,3 +1,10 @@
+---
+title: Live coding ONLY: Prodding & probing your binaries
+subtitle: A Hands-On Debugging and Tracing Primer
+author:
+ - David Asabina
+---
+
 > Throughout this document, emoji's are used as a legend to mark sections. The
 legend is as follows:
  - :boom: rant/personal opinion
@@ -7,13 +14,16 @@ legend is as follows:
 
 ## Intro
 
-In the spirit of "don't reinvent the wheel", this talk aims to demonstrate how
-well-suited existing tools are for debugging, tracing and perf-ing applications.
-Many of the tools we think we need are already there. We just need to learn how
-to use them and use them well.
+In the spirit of "don't reinvent the wheel", this session aims to demonstrate
+how well-suited existing tools are for debugging and tracing applications.
+Many of the tools we think we need are often already there, albeit in a
+user-intimidating[^1] form. We just need to learn how to use them and use them
+well.
 
-:explosion: Software, with the access to better computing hardware, sometimes
-gets passes for sloppiness. There is enough software out there that isn't really
+[^1]: These tools could easily be dismissed as user-unfriendly, but the reality is that these tools aren't too hard to use. They are intimidating from the onset, hence the term user-intimidating.
+
+:boom: Software, with the access to better computing hardware, sometimes gets
+passes for sloppiness. There is enough software out there that isn't really
 efficient, eventhough efficiency should be a valuable metric in our software
 engineering practice, if only to offload a few kilowatts that our planet would
 otherwise pay the price for. Being efficient and wise in our resource
@@ -27,13 +37,21 @@ landscape.
 
 It's not just about languages though. It's about projects too. A project like
 Cordano or Facebook's duckling, writen in Haskell, many tools from Hashicorp or
-many of the tools in the Kubernetosphere, riding on top of the Golang train, are
-making more of us familiar with the notion of our applications compiling to
+many of the tools in the Kubernetosphere, riding on top of the Golang train,
+are making more of us familiar with the notion of our applications compiling to
 binaries.
 
 At some point, simply printf-ing your way through life will not suffice.
 
-### Adminstrative
+## Audience
+
+This talk is targeted at developers who primarily debug-by-printf, and have
+little to no experience with gdb, strace, perf and other debuggers or tracers.
+
+### Adminstrative Note before we begin
+
+ - [ ] Condense this section... Too much text. I don't have to write a complete
+ script for the talk :wink:
 
 I have provided a Dockerfile for everything covered in this talk. So anyone who
 can wield a Docker sword to any degree of success should be able to follow
@@ -72,22 +90,37 @@ environment.
 editor. Hence my strong focus on vi. Don't read much into it. I think we should
 all learn them both. Emacs in evil mode kicks ass :wink:
 
-## GDB
+## Dockerfile
+
+In order to create a Docker container, we specify a Dockerfile in which we
+indicate which image we are using as a base through the `FROM`
+
+## Workshop
+
+The workshop is chopped into different sections. Each section covers another
+
+### GDB
 
 The GNU debugger is a versatile tool which allows us to prod and poke our
 executables in a rather non-intrusive manner (i.e.: nonintrustive as in not
 requiring us to litter our codebase with printf statements). In this demo we
 will explore how to debug C/C++, Go and Rust applications.
 
-## Dockerfile
+### Dtrace
 
-In order to create a Docker container, we specify a Dockerfile in which we
-indicate which image we are using as a base through the `FROM`
+WIP
+
+### Perf
+
+WIP
 
 
 # Links/References
 
- - @fatih vim-go author
+[fatih]: https://www.twitter.com/@fatih vim-go author
+
+[1]: https://sysdig.com/blog/sysdig-vs-dtrace-vs-strace-a-technical-discussion/
+[tracers]: http://www.brendangregg.com/blog/2015-07-08/choosing-a-linux-tracer.html
 
 # Issues
 
