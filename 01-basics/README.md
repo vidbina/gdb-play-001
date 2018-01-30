@@ -1,15 +1,16 @@
 # Build
 
-Built the example.c source file with the following command to produce binary
-a.out.
+Built the example.c source file with the following command to produce
+binary a.out.
 
 ```
 gcc -g -O0 example.c
 ```
 
-> NOTE: that `-g` builds the binary with some extra information for debugging
-purposes without this information the binary ends up a bit lighter and faster
-but a bit debugger-unfriendly.
+> NOTE: that `-g` builds the binary with some extra information for
+> debugging
+purposes without this information the binary ends up a bit lighter and
+faster but a bit debugger-unfriendly.
 
 Debug the application using the following command.
 
@@ -17,9 +18,70 @@ Debug the application using the following command.
 gdb a.out
 ```
 
-## Issues
+# Usage
 
-### NixOS: Jumpy cursor due to optimization?
+This section will give a basic overview how to use gdb without any of the bells
+and whistles of graphical environments, etc.
+
+## Getting Help
+
+ - `help`
+
+## Code Listing
+
+ - `list`
+ - explain variable `listsize`
+
+## Where and the Backtrace
+
+> Makes sense to mention here as a mechanism for getting our bearing on where
+we are in the codebase. We'll discuss frames in more details in the eponymous
+section.
+
+ - `where` = `bt`
+
+## Running
+
+ - `start`
+ - `run` until breakpoint or exit
+ - `continue` after breakpoint
+ - `finish` current function
+
+## Walking through the code
+
+ - `next` proceed without entering subroutine
+ - `step` proceed while entering subroutine (think babysteps)
+
+## Backwards
+
+ - `rc` = `reverse-continue`
+ - `reverse-step`
+ - `reverse-next`
+
+## Inspecting
+
+ - `print` prints the output of right-hand expression (could be used for
+ assignment)
+
+## Breakpoints
+
+ - `break` adds breakpoint
+
+## Shell
+
+ - `shell`
+
+## Frames
+
+ - about frame pointer registers
+ - `info stack` = `bt` = `where`
+ - `bt full`
+
+## Core dumps
+
+# Issues
+
+## NixOS: Jumpy cursor due to optimization?
 
 - https://github.com/NixOS/nixpkgs/issues/18995
 
