@@ -48,6 +48,19 @@ At some point, simply printf-ing your way through life will not suffice.
 This talk is targeted at developers who primarily debug-by-printf, and have
 little to no experience with gdb, strace, perf and other debuggers or tracers.
 
+## Structure
+
+The talk starts by  demonstrating how a basic C application is compiled and
+executed through the GDB.
+
+After the initial demo, more complicated cases (stack overflows, memory leaks,
+etc) are presented and walked through in order to provide the user a decent
+basic understanding of the possibilities when using debuggers and tracers.
+
+All demos will be executed in either a VM or container of which the entire
+environment will be provided in a declarative manner (i.e.: Vagrantfile,
+Dockerfile or the like).
+
 ### Adminstrative Note before we begin
 
  - [ ] Condense this section... Too much text. I don't have to write a complete
